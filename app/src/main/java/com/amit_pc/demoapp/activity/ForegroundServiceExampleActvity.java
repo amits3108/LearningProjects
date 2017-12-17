@@ -33,6 +33,7 @@ public class ForegroundServiceExampleActvity extends AppCompatActivity implement
                     Intent startIntent = new Intent(this, ForegroundService.class);
                     startIntent.setAction(Constants.ACTION.STARTFOREGROUND_ACTION);
                     startService(startIntent);
+
                     break;
                 case R.id.button2:
                     Intent stopIntent = new Intent(this, ForegroundService.class);
