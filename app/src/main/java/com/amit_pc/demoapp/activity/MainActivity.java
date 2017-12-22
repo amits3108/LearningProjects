@@ -126,4 +126,34 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
+    /*class A{
+        public void fun(String str){
+            System.out.println("A has "+str);
+        }
+        public void fun(String str,int i){
+            System.out.println("A has "+str+" int "+i);
+        }
+    }
+
+    class B extends A{
+        public void fun(String str){
+            System.out.println("B Fun"+ str);
+        }
+        public void fun(String str,int i){
+            System.out.println("B has"+str+" int "+i);
+        }
+    }
+
+    class C{
+        public void running() {
+            B b = new B();
+            b.fun("Fun B");
+            b.fun("Fun B",1);
+
+            B b1 = (B) new A();
+            b1.fun("Fun A");
+            b1.fun("Fun A",2);
+        }
+    }*/
+
 }
