@@ -42,6 +42,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         setArrayList();
         setAdapter();
+//        C c = new C();
+//        c.running();
     }
 
     @Override
@@ -126,7 +128,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    /*class A{
+    /*interface InterfaceExample{
+        void firstOverride();
+        void secondOverride();
+    }
+    class A {
         public void fun(String str){
             System.out.println("A has "+str);
         }
@@ -150,9 +156,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             b.fun("Fun B");
             b.fun("Fun B",1);
 
-            B b1 = (B) new A();
-            b1.fun("Fun A");
-            b1.fun("Fun A",2);
+//            B b1 = (B) new A();       //Here ClassCastException is appeared at runtime. At compile time we were not able to find out the error.
+//            b1.fun("Fun A");
+//            b1.fun("Fun A",2);
+
+            A a = new B();
+            a.fun("Fun B");
+            a.fun("Fun B",3);
+
+            InterfaceExample in = new InterfaceExample() {
+                @Override
+                public void firstOverride() {
+
+                }
+
+                @Override
+                public void secondOverride() {
+
+                }
+            };
         }
     }*/
 
