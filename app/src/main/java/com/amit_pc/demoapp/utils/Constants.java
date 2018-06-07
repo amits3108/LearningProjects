@@ -13,15 +13,15 @@ public class Constants {
     }
 
     public interface ACTION {
-        public static String MAIN_ACTION = "com.amit_pc.demoapp.utils.action.main";
-        public static String PREV_ACTION = "com.amit_pc.demoapp.utils.action.prev";
-        public static String PLAY_ACTION = "com.amit_pc.demoapp.utils.action.play";
-        public static String NEXT_ACTION = "com.amit_pc.demoapp.utils.action.next";
-        public static String STARTFOREGROUND_ACTION = "com.amit_pc.demoapp.utils.action.startforeground";
-        public static String STOPFOREGROUND_ACTION = "com.amit_pc.demoapp.utils.action.stopforeground";
+        String MAIN_ACTION = "com.amit_pc.demoapp.utils.action.main";
+        String PREV_ACTION = "com.amit_pc.demoapp.utils.action.prev";
+        String PLAY_ACTION = "com.amit_pc.demoapp.utils.action.play";
+        String NEXT_ACTION = "com.amit_pc.demoapp.utils.action.next";
+        String STARTFOREGROUND_ACTION = "com.amit_pc.demoapp.utils.action.startforeground";
+        String STOPFOREGROUND_ACTION = "com.amit_pc.demoapp.utils.action.stopforeground";
     }
 
     public interface NOTIFICATION_ID {
-        public static int FOREGROUND_SERVICE = 101;
+        int FOREGROUND_SERVICE = 101;
     }
 }
