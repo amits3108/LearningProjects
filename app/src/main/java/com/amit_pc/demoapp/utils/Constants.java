@@ -17,8 +17,8 @@ public class Constants {
         String PREV_ACTION = "com.amit_pc.demoapp.utils.action.prev";
         String PLAY_ACTION = "com.amit_pc.demoapp.utils.action.play";
         String NEXT_ACTION = "com.amit_pc.demoapp.utils.action.next";
-        String STARTFOREGROUND_ACTION = "com.amit_pc.demoapp.utils.action.startforeground";
-        String STOPFOREGROUND_ACTION = "com.amit_pc.demoapp.utils.action.stopforeground";
+        String START_FOREGROUND_ACTION = "com.amit_pc.demoapp.utils.action.startforeground";
+        String STOP_FOREGROUND_ACTION = "com.amit_pc.demoapp.utils.action.stopforeground";
     }
 
     public interface NOTIFICATION_ID {

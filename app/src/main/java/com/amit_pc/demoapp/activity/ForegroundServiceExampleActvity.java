@@ -31,18 +31,16 @@ public class ForegroundServiceExampleActvity extends AppCompatActivity implement
             switch (v.getId()) {
                 case R.id.button1:
                     Intent startIntent = new Intent(this, ForegroundService.class);
-                    startIntent.setAction(Constants.ACTION.STARTFOREGROUND_ACTION);
+                    startIntent.setAction(Constants.ACTION.START_FOREGROUND_ACTION);
                     startService(startIntent);
                     break;
                 case R.id.button2:
                     Intent stopIntent = new Intent(this, ForegroundService.class);
-                    stopIntent.setAction(Constants.ACTION.STOPFOREGROUND_ACTION);
+                    stopIntent.setAction(Constants.ACTION.STOP_FOREGROUND_ACTION);
                     startService(stopIntent);
                     break;
                 default:
                     break;
             }
-
         }
-
 }

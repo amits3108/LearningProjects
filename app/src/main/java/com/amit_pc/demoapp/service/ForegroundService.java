@@ -7,12 +7,11 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.IBinder;
-import android.support.v7.app.NotificationCompat;
+import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
 import com.amit_pc.demoapp.R;
 import com.amit_pc.demoapp.activity.ForegroundServiceExampleActvity;
-import com.amit_pc.demoapp.activity.MainActivity;
 import com.amit_pc.demoapp.utils.Constants;
 
 public class ForegroundService extends Service {
@@ -25,7 +24,7 @@ public class ForegroundService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        if (intent.getAction().equals(Constants.ACTION.STARTFOREGROUND_ACTION)) {
+        if (intent.getAction().equals(Constants.ACTION.START_FOREGROUND_ACTION)) {
             Log.i(LOG_TAG, "Received Start Foreground Intent ");
             Intent notificationIntent = new Intent(this, ForegroundServiceExampleActvity.class);
             notificationIntent.setAction(Constants.ACTION.MAIN_ACTION);
@@ -76,7 +75,7 @@ public class ForegroundService extends Service {
         } else if (intent.getAction().equals(Constants.ACTION.NEXT_ACTION)) {
             Log.i(LOG_TAG, "Clicked Next");
         } else if (intent.getAction().equals(
-                Constants.ACTION.STOPFOREGROUND_ACTION)) {
+                Constants.ACTION.STOP_FOREGROUND_ACTION)) {
             Log.i(LOG_TAG, "Received Stop Foreground Intent");
             stopForeground(true);
             stopSelf();
