@@ -1,0 +1,19 @@
+import groovy.json.JsonSlurper
+
+ext {
+
+    // Incremental version code.
+    verCode = computeVerName()
+}
+
+static computeVerName() {
+    def format = 'YYMMddHHmm'
+    def date = new Date()
+    def formattedDate = date.format(format)
+    return Integer.parseInt(formattedDate)
+}
+
+def result = new JsonSlurper().parse(file("$project.rootDir/scripts/version.json")) as Map
+result.each { key, value ->
+    ext[key] = value
+}

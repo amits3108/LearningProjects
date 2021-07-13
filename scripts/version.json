@@ -1,0 +1,7 @@
+{
+  "_minSDK": 19,
+  "_targetSdk": 28,
+  "_compileSdk": 28,
+  "_buildToolVersion": "28.0.3",
+  "_gradleVersion": "3.5.2"
+}
