@@ -4,12 +4,12 @@ import android.app.Service;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.IBinder;
-import android.support.annotation.IntDef;
-import android.support.annotation.Nullable;
 import android.widget.Toast;
 
 import com.amit_pc.demoapp.R;
 import com.amit_pc.demoapp.utils.Utils;
+
+import androidx.annotation.Nullable;
 
 /**
  * Created by amit_pc on 23-09-2017.
@@ -22,7 +22,7 @@ public class MyService extends Service {
     //NOTE: LifeCycle of Bounded Services
     // bindService()  -> onCreate -> onBind -> onUnbind() -> onDestroy
 
-    private static String TAG = "MY_SERVICE_CLASS";
+    private static final String TAG = "MY_SERVICE_CLASS";
 
     MediaPlayer mediaPlayer;
 

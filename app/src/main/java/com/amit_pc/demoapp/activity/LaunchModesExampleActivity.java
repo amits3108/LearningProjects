@@ -2,19 +2,20 @@ package com.amit_pc.demoapp.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.Button;
 
 import com.amit_pc.demoapp.R;
 import com.amit_pc.demoapp.utils.Utils;
 
+import androidx.annotation.Nullable;
+
 /**
  * Created by amit_pc on 26-09-2017.
  */
 
 public class LaunchModesExampleActivity extends BaseActivity implements View.OnClickListener {
-    private static String TAG = LaunchModesExampleActivity.class.getName();
+    private static final String TAG = LaunchModesExampleActivity.class.getName();
     private Button btnLaunchStandard;
     private Button btnLaunchSingleTop;
     private Button btnLaunchSingleTask;
@@ -29,10 +30,10 @@ public class LaunchModesExampleActivity extends BaseActivity implements View.OnC
 
     @Override
     public void getId() {
-        btnLaunchStandard = (Button) findViewById(R.id.btn_launch_standard);
-        btnLaunchSingleTop = (Button) findViewById(R.id.btn_launch_single_top);
-        btnLaunchSingleTask = (Button) findViewById(R.id.btn_launch_single_task);
-        btnLaunchSingleInstance = (Button) findViewById(R.id.btn_launch_single_instance);
+        btnLaunchStandard = findViewById(R.id.btn_launch_standard);
+        btnLaunchSingleTop = findViewById(R.id.btn_launch_single_top);
+        btnLaunchSingleTask = findViewById(R.id.btn_launch_single_task);
+        btnLaunchSingleInstance = findViewById(R.id.btn_launch_single_instance);
     }
 
     @Override

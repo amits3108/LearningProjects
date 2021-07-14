@@ -1,15 +1,10 @@
 package com.amit_pc.demoapp.activity;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.Toast;
 
 import com.amit_pc.demoapp.Adapter.ConceptListAdapter;
@@ -21,6 +16,10 @@ import com.amit_pc.demoapp.utils.StringPermutations;
 import com.amit_pc.demoapp.utils.Utils;
 
 import java.util.ArrayList;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, ConceptClickListener {
@@ -48,13 +47,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.submit_btn:
-                loadPattern1();
-                Utils.showToast(MainActivity.this, "Now Check Your Console", Toast.LENGTH_SHORT);
-                editText.setVisibility(View.GONE);
-                submitButton.setVisibility(View.GONE);
-                break;
+        if (view.getId() == R.id.submit_btn) {
+            loadPattern1();
+            Utils.showToast(MainActivity.this, "Now Check Your Console", Toast.LENGTH_SHORT);
+            editText.setVisibility(View.GONE);
+            submitButton.setVisibility(View.GONE);
         }
     }
 
@@ -99,11 +96,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Utils.showToast(MainActivity.this, "Enter some number in edit text", Toast.LENGTH_SHORT);
                 break;
             case Constants.CONCEPT_NAME.LAUNCH_MODES:
-                startActivity(new Intent(MainActivity.this,LaunchModesExampleActivity.class));
+                startActivity(new Intent(MainActivity.this, LaunchModesExampleActivity.class));
                 break;
+            default:
+                throw new IllegalStateException("Unexpected value: " + conceptModel.getConceptName());
         }
     }
-
 
     private void loadPattern1() {
 //        this type of pattern is loaded.

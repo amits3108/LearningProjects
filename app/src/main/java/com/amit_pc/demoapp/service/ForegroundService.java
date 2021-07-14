@@ -7,12 +7,13 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.IBinder;
-import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
 import com.amit_pc.demoapp.R;
 import com.amit_pc.demoapp.activity.ForegroundServiceExampleActvity;
 import com.amit_pc.demoapp.utils.Constants;
+
+import androidx.core.app.NotificationCompat;
 
 public class ForegroundService extends Service {
     private static final String LOG_TAG = "ForegroundService";
